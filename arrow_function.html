@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter First Number:
+    <input type="number" id="number_one"><br>
+    Enter Second Number:
+    <input type="number" id="number_two"><br>
+    <button type="button" id="add_btn" onclick="addNumbers()">+</button>
+    <button type="button" id="divide_btn">/</button>
+    <h3 id="result"></h3>
+</body>
+<script>
+    // let add_btn = document.getElementById('add_btn');
+    // let divide_btn = document.getElementById('divide_btn');
+
+    // let result_add = document.getElementById('result_add');
+    // let result = document.getElementById('result');
+    // let addNumbers = ()=> {
+    //     let number_one = document.getElementById('number_one').value;
+    //     let number_two = document.getElementById('number_two').value;
+    //     let result_add = number_one + number_two;
+    //     console.log(result_add)
+    // document.getElementById('result').innerHTML = result_add;
+
+    // if (number_one == '') {
+    //     console.log('Fill the input');
+    // }
+    // else if (number_two == '') {
+    //     console.log('Fill the input');
+    // }
+    // else {
+    //     // console.log(number_one)
+    // console.log(number_two)
+
+    // }
+
+    // }
+    // addNumbers()
+
+    addNumbers = ()=> {
+        let number_one = document.getElementById('number_one').value;
+        let number_two = document.getElementById('number_two').value;
+        // console.log(number_two)
+        // console.log(number_one)
+        // let plus = document.getElementById('add_btn')
+        
+        var result = parseInt(number_one) + parseInt(number_one)
+        console.log(result)
+    }
+    // let a = 2;
+    // let b = 5;
+    // c = a + b;
+    // console.log(c);
+</script>
+
+</html>

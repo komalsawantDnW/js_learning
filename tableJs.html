@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Table using Javascript</p>
+    <!-- <button onclick="addRow()">Add Row</button> -->
+    <table id="myTable">
+        <thead>
+            <th id="country_name">Country Name</th>
+            <th id="country_currency">Country Currency</th>
+            <th id="population">Population</th>
+        </thead>
+    </table>
+</body>
+<script>
+    for (let i = 0; i < 10; i++) {
+        // const element = array[i];
+        let table = document.getElementById('myTable');
+        let row = document.createElement('tr');
+        row.style.textAlign = "center"
+        let cell_1 = row.insertCell(0)
+        let cell_2 = row.insertCell(1)
+        let cell_3 = row.insertCell(2)
+
+        cell_1.innerHTML = "India"
+        cell_2.innerHTML = "Delhi"
+        cell_3.innerHTML = "100Cr"
+        table.appendChild(row);
+    }
+
+    
+
+
+
+
+
+</script>
+
+</html>

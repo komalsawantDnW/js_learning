@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popover.css">
+</head>
+
+<body>
+    <button class="btn_popover" onclick="show_popover()">Popover</button>
+    <div class="arrow_left" id="triangle"></div>
+    <main id="main_content">
+        <div class="popover">
+            <h4>Heading here</h4>
+            <div class="bottom_line"></div>
+            <select id="dropdown_1" class="dropdown inner_content">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
+            <select id="dropdown_1" class="dropdown inner_content">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
+            <select id="dropdown_3" class="dropdown inner_content">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
+            <a href="#" class="text inner_content">Text area 1</a>
+            <a href="#" class="text inner_content">Text area 1</a>
+            <a href="#" class="text inner_content">Text area 1</a>
+        </div>
+    </main>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        function show_popover(){
+            var main_content = document.getElementById('main_content');
+            var triangle = document.getElementById('triangle');
+            // main_content.style.visibility = "visible"
+            triangle.style.visibility = "visible"
+            if(main_content.style.visibility != "visible" || triangle.style.visibility != "visible"){
+                main_content.style.visibility = "visible"
+                triangle.style.visibility = "visible"
+            }
+            else{
+                main_content.style.visibility = "hidden"
+                triangle.style.visibility = "hidden"
+            }
+        }
+    </script>
+</body>
+
+</html>

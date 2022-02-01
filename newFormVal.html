@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    input {
+        margin: 10px;
+    }
+
+    #uName_val,
+    #uMail_val,
+    #uPhon_val,
+    #uPass_val,
+    #uCpass_val {
+        color: red;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+</style>
+
+<body>
+
+    User Name:
+    <input type="text" id="user_name"></input><span id="uName_val"></span><br>
+    Email:
+    <input type="email" id="user_mail"></input><span id="uMail_val"></span><br>
+    Phone No:
+    <input type="number" id="user_phone"></input><span id="uPhon_val"></span><br>
+    Password:
+    <input type="text" id="user_pass"></input><span id="uPass_val"></span><br>
+    <!-- Confirm Password:
+    <input type="text" id="user_cpass"></input><span id="uCpass_val"></span><br> -->
+
+    <button type="button" id="sub_btn">Submit</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        var sub_btn =  document.getElementById('sub_btn')
+        sub_btn.addEventListener('click', function () {
+            var user_pass = document.getElementById('user_pass').value;
+            passPattern = /[A-Za-z]/
+            if (user_pass == "") {
+                console.log("Blank")
+                document.getElementById('uPass_val').innerHTML = "*Password should not be blank"
+            }
+            else if (user_pass !== String) {
+                document.getElementById('uPass_val').innerHTML = "*Password should not content number"
+            }
+            else if (user_pass.match(passPattern)) {
+                return true
+            }
+            else
+                document.getElementById('uPass_val').innerHTML = "*Password Should not contain number"
+            
+
+
+            // UserName
+            var user_name = document.getElementById('user_name').value
+            userNamePattern = /[A-Za-z]{5,10}/ 
+            if (user_name == '') {
+                document.getElementById('uName_val').innerHTML = "*Username cannot be blank"
+                // console.log("invalid")
+            }
+            
+            else if(user_name.length < 5){
+                document.getElementById('uName_val').innerHTML = "*Username should have atleast 5 characters"
+                // console.log("invalid")
+            }
+            else if(user_name.length > 10){
+                document.getElementById('uName_val').innerHTML = "*Username should have 10 characters only"
+                // console.log("invalid")
+            }
+            else if (user_name.match(userNamePattern)) {
+                return true
+            }
+            else{
+                document.getElementById('uName_val').innerHTML = "*Username doesn't contain number"
+                // console.log("invalid")
+            }
+
+            // User Mail
+            var user_mail = document.getElementById('user_mail').value
+            // mailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(user_mail == ''){
+                // console.log("Invalid")
+                document.getElementById('uMail_val').innerHTML = "**Mail Cannot be blank"
+            }
+            // else if (user_mail.match(mailPattern)) {
+            //     return true
+            // }
+            else{
+                document.getElementById('uMail_val').innerHTML = "Mail is not valid"
+                // console.log("invalid mail")
+            }
+            
+
+            // User Phone Number
+            var user_phone = document.getElementById('user_phone').value
+            if (user_phone == "") {
+                document.getElementById('uPhon_val').innerHTML = "*Phone No Cannot be blank"
+                // console.log("invalid")
+            }
+            else if(user_phone.length < 10){
+                document.getElementById('uPhon_val').innerHTML = "*Phone No should have minimum 10 characters"
+                // console.log("invalid")
+            }
+            else if(user_phone.length > 10){
+                document.getElementById('uPhon_val').innerHTML = "*Phone No should have maximum` 10 characters"
+                // console.log("invalid")
+            }
+        }) 
+          
+    </script>
+</body>
+</html>

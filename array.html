@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+</body>
+<script>
+    var techLang = ['HTML','CSS','Js'];
+    console.log(techLang[1]);
+    techLang[2] = 'XML'
+    techLang[3] = 'Js';
+    techLang[techLang.length] = "Python"
+    techLang.push('C++');
+    techLang.pop();
+    console.log(techLang);
+    techLang.pop();
+    console.log(techLang);
+    console.log("-----------------------------------------------------------");
+    
+    // techLang[7] = 'Python';
+    
+    var techLang = ['HTML','CSS','Js'];
+    techLang.splice(3, 0, 'Php','Laravel')
+    techLang.splice(3, 0, 'Php','Laravel','C#','java')
+    console.log(techLang);
+    
+    techLang.splice(3, 1)
+    console.log(techLang);
+    
+    techTool = ['VsCode','PyCharm','Intellij','VsStudio'];
+    tech = techLang.concat(techTool);
+    console.log(techLang);
+    console.log(techTool);
+    console.log(tech);
+
+    tech.sort();
+    console.log(tech);
+    tech.reverse();
+    console.log(tech);
+
+</script>
+</html>

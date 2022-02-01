@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age" type="number" placeholder="Your age">
+    <button id="btn" onclick="show_greet()">Greeting</button>
+    <p id="greet"></p>
+
+    <p id="text_number"></p>
+</body>
+<script>
+    // Doubt
+    function show_greet(){
+        let greet = document.getElementById('greet');
+        let age = document.getElementById('age');
+        let btn = document.getElementById('btn');
+        let greetme;
+        if(age > 22)
+        {
+            greet_me = "Hello Seniors!"
+        }
+        else
+        {
+            greet_me = "Hello Juniors!"
+        }
+        greet.innerHTML = greet_me;
+    }
+
+
+    let age = 7;
+    let doesDrive = true;
+    if(age > 18 ){
+        console.log("You can drink alcohol")
+    }
+    else if(age == 4){
+        console.log("You should drink milk, Your age is 4")
+    }
+    else if(age == 5 || doesDrive){
+        console.log("You should drink milk, Your age is 5 and drive")
+    }
+    else if(age == 6){
+        console.log("You should drink milk, Your age is 6")
+    }
+    else if(age == 7 || doesDrive){
+        console.log("You should drink milk, Your age is 7")
+    }
+    else{
+        console.log("You are not eligible to drink alcohol")
+    }
+
+    let percentage = 70;
+    let toper = false;
+    if (percentage = 85 && toper) 
+    {
+        console.log("You did good and you are topper")
+    }
+    else if (percentage = 75 && toper) 
+    {
+        console.log("You did good and you are topper")
+    }
+    else
+    {
+        console.log("You did good but need your best")
+    }
+
+    // doubt
+    var  number = 47;
+    let text;
+    if (number = 45) 
+    {
+        text = "Number is 45";
+    }
+    else{
+        text = "Number is not 45";
+    }
+    document.getElementById('text_number').innerHTML = text;
+
+
+
+    let age_number = 22;
+    switch (age_number) {
+        case 21:
+            console.log("Age is 21")
+            break;
+        case 23:
+            console.log("Age is 23")
+            break;
+        case 24:
+            console.log("Age is 24")
+            break;
+        case 25:
+            console.log("Age is 25")
+            break;
+        case 26:
+            console.log("Age is 26")
+            break;
+    
+        default:
+            console.log("Age is none of the 21, 23, 24, 25, 26")
+            break;
+    }
+
+    let today = "Saturday"
+    switch (today) {
+        case "Monday":
+            console.log("Today is Monday");
+            break;
+        case "Tuesday":
+            console.log("Today is Tuesday");
+            break;
+        case "Wednesday":
+            console.log("Today is Wednesday");
+            break;
+        case "Thursday":
+            console.log("Today is Thursday");
+            break;
+        case "Friday":
+            console.log("Today is Friday");
+            break;
+    
+        default:
+            console.log("Today is not Monday, Tuesday, Wednesday, Thursday, Friday")
+            break;
+    }
+</script>
+</html>

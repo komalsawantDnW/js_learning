@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="oldheading">Para using innerHTML</p>
+    <h1 id="show_text" style="display: none;">This is text</h1>
+    
+    <p id="number"></p>
+    <p id="para"></p>
+
+
+    <input type="text" placeholder="Full name" id="fname">
+    <button id="greet_btn">Greet</button>
+    <h1 id="greet"></h1>
+
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <h1 id="inc_dec">Increase me or decrease me</h1>
+
+    <button id="add_list">Add</button>
+    <button id="remove_list_btn" onclick="remove_child()">Remove</button>
+    <button id="remove" onclick="remove()">Stop Adding</button>
+    <button id="replace" onclick="replace()">Replace</button>
+    <ul id="to_do" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+        <li>List 1</li>
+        <li>List 2</li>
+    </ul>
+
+    <button id="dummy_btn">Change</button>
+    <p id="replace_txt"></p>
+
+    <div id="m_over" onmouseover="overme()" onmouseout="outme()" style="height: 30%; width: 30%; background: #000; color: aliceblue;">
+        <h1 id="over_txt">Hover me</h1>
+    </div>
+    <select name="" id="select_any" onchange="selection()">
+        <option value="js" id="js">Javascript</option>
+        <option value="css" id="css">CSS</option>
+        <option value="html" id="html">Html</option>
+    </select>
+    <p id="selected"></p>
+    <button id="add_node" onclick="click_node()">Remove</button>
+    <div id="dummy_div">
+        <p id="para1">Paragraph 1</p>
+    </div>
+    <button id="btn" onclick="show_text()">Click to change</button>
+    <button class="num_btn" id="num_1" onclick="display('1')">1</button>
+    <button class="num_btn" id="num_2" onclick="display('2')">2</button>
+    <button class="num_btn" id="num_3" onclick="display('3')">3</button>
+    <button class="num_btn" id="num_4" onclick="display('4')">4</button>
+    <button class="num_btn" id="num_5" onclick="display('5')">5</button>
+
+
+    
+    <script>
+        function selection(){
+            let selected_any = document.getElementById('select_any').value;
+            document.getElementById('selected').innerHTML = "You selected " + selected_any;
+        }
+
+
+
+        
+        document.getElementById('num_1').innerHTML = "11";
+
+
+        let add_node = document.getElementById('add_node');
+        let add_para_elem = document.createElement('p');
+        let add_txt_node = document.createTextNode('Paragraph 2');
+        add_para_elem.appendChild(add_txt_node);
+
+        let dummy_div = document.getElementById('dummy_div');
+        let para1 = document.getElementById('para1');
+        dummy_div.insertBefore(add_txt_node, para1);
+        // remove
+        function click_node(){
+            document.getElementById('para1').remove();
+        }
+        // let para1 = document.getElementById('para1');
+        // add_node.addEventListener('click', function(){
+
+        // });
+        // onmouseover
+        function overme(){
+            document.getElementById('over_txt').innerHTML = "Thank You"
+            document.getElementById('m_over').style.background = "blue"
+        }
+        // onmouseout
+        function outme(){
+            document.getElementById('over_txt').innerHTML = "Come Again"
+            document.getElementById('m_over').style.background = "pink"
+        }
+
+        // onclick event
+        document.getElementById('dummy_btn').onclick = replace_fn;
+        function replace_fn(){
+            // let replace_txt = document.getElementById('replace_txt');
+            // id.innerHTML = "Replaced Text";
+            replace_txt.innerHTML = Date();
+        }
+
+        // innerHTML
+        document.getElementById('oldheading').innerHTML = "Replacing Para using innerHTML";
+
+        // dom style
+        document.getElementById('oldheading').style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+
+        // appendChild
+        let add_list = document.getElementById('add_list');
+        add_list.addEventListener('click', myfunction);
+
+        function myfunction() {
+
+            let element = document.createElement('li');
+            let textnode = document.createTextNode('List 3');
+            to_do = document.getElementById('to_do');
+            newlist = element.appendChild(textnode);
+            to_do.appendChild(newlist);
+            let textnode_2 = document.createTextNode('List 4');
+            element.replaceWith(textnode_2);
+        }
+
+        // Doubt-removeChild
+        let to_do = document.getElementById('to_do');
+        remove_list_btn.addEventListener('click', remove_child);
+        function remove_child() {
+            to_do.removeChild(to_do.childNodes[0]);
+        };
+        //doubt replaceChild
+        function replace() {
+            let new_list = document.createElement('List 4');
+            let replace_child = document.getElementById('to_do');
+            replace_child.childNodes[0];
+            replace_child.replaceChild(new_list, replace_child.childNodes[0]);
+        }
+        // write
+        document.write('Hello World!');
+        document.write('Hi World!');
+        // doubt writeln
+        document.writeln('Hello World');
+        document.writeln('Hi World');
+        
+
+
+
+
+
+
+
+
+
+    function remove(){
+    add_list.removeEventListener('click', myfunction)
+
+    }
+
+
+
+
+
+
+
+
+    // let add_list = document.getElementById('add_list');
+    // add_list.addEventListener('click', myfunction);
+
+    // function myfunction(){
+
+    // let element = document.createElement('li');
+    // let textnode = document.createTextNode('List 3');
+    // to_do = document.getElementById('to_do');
+    // newlist = element.appendChild(textnode);
+    // to_do.appendChild(newlist);
+    // let textnode_2 = document.createTextNode('List 4');
+    // element.replaceWith(textnode_2)
+
+    // }
+
+
+
+
+
+    // let add_list = document.getElementById('add_list');
+    // let new_list = document.createElement('li');
+    // let text = document.createTextNode('List 3');
+    // new_list.appendChild(text);
+    // add_list.addEventListener('click', function(){
+    // let to_do = document.getElementById('to_do');
+    // to_do.appendChild(new_list)
+    // });
+
+
+
+
+
+
+    // document.getElementById('to_do').appendChild(new_list);
+    // });
+
+
+
+
+    // let to_do = document.getElementById('to_do')
+    // let element = document.createElement('li');
+    // element.className = "ls";
+    // element.id = "ls_1";
+    // element.textContent = "List 1";
+    // console.log(element);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let to_do = document.getElementById('to_do');
+    // let add_list = document.getElementById('add_list');
+
+    // add_list.addEventListener('click', function(){
+    // var newListElement = document.createElement('li');
+    // var textnode = document.createTextNode('List 3')
+    // newListElement.appendChild(textNode);
+    // newListElement.id = 'item3';
+
+    // list.appendChild(newListElement);
+    // });
+
+
+
+
+    // let minus = document.getElementById('minus');
+    // plus.addEventListener('click', ()=>{
+    // let plus = document.getElementById('plus');
+
+    // let inc_dec = document.getElementById('inc_dec');
+    // inc_desc.style.fontsize = "50px";
+    // });
+    // minus.addEventListener('click', ()=>{
+
+    // let inc_dec = document.getElementById('inc_dec');
+    // inc_desc.style.fontsize = "10px";
+    // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let greet_btn = document.getElementById('greet_btn');
+    let greet = document.getElementById('greet');
+    greet_btn.addEventListener('click', ()=>{
+    let fname = document.getElementById('fname').value;
+    // alert(fname);
+    greet.innerHTML = "Hello " + fname;
+    // console.log("Hello" + fname);
+    });
+
+
+    let btn = document.getElementById('show_btn');
+    let text_shown = document.getElementById('show_text');
+    function show_text(){
+    if(text_shown.style.display != 'block')
+    {
+    text_shown.style.display = 'block';
+    }
+    else{
+    text_shown.style.display = 'none';
+    }
+    }
+
+    // let p_text = document.getElementById('para');
+    // p_text.innerHTML = "Inner Html Worked";
+
+    document.getElementById('para').innerHTML = 'Inner Html working'
+
+    let btn_num = document.querySelectorAll('.num_btn');
+    console.log(btn_num);
+
+    let num1 = document.getElementById('num_1');
+    let no = document.getElementById('number');
+    num1.addEventListener('click', ()=>{
+    no.innerHTML = "1"
+    });
+
+
+    </script>
+</body>
+
+</html>

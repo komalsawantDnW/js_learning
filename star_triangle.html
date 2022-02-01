@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para"></p>
+</body>
+<script>
+    // let star = "*";
+    // let triangle = ""
+    // for (let i = 0; i < star; i++) {
+    //     const element = star[i];
+    //     star+=1;
+    // }
+    // console.log(star);
+
+    // let triangle = ["*"];
+    // for (let i = 0; i < triangle; i++) {
+    //     const element = triangle[i];
+    //     triangle+=1
+    //     console.log(triangle[i]);
+    // }
+
+    // let triangle_1 = `
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+    // `
+    // console.log(triangle_1)
+
+    let triangle_star = ""
+    for (let i = 0; i < 4; i++) {
+        triangle_star += "*";
+        document.getElementById('para').innerHTML = triangle_star;
+        console.log(triangle_star)
+    }
+    // let triangle_num = "";
+    // for (let i = 0; i < 4; i++) {
+    //         triangle_num += '1';
+    //         let triangle_num_pattern = triangle_num++;
+    //         console.log(triangle_num_pattern);
+    // }  
+    // let triangle_num = "";
+    // for (let i = 0; i < 4; i++) {
+    //     let num = "1"
+    //     for (let k = 1; k < 4; k++) {
+    //         num += "1"
+    //     }
+    //     triangle_num = "1";
+    //     let triangle_num_pattern = triangle_num++;
+    //     console.log(triangle_num_pattern);
+    // }
+
+    // let triangle_num = "";
+    // for (let i = 1; i <= 4; i++) {
+    //     for (let j = 1; j <= i; j++) {
+    //         triangle_num += i;
+    //     }
+    //     triangle_num += "\n";
+    // }
+
+    // console.log(triangle_num);
+    // let triangle_num = ""
+    // for (let i = 0; i < 4; i++) {
+    //     let number = ""
+    //     for (let k = 0; k < 4; k++) {
+    //         number += "1"; 
+    //         console.log(number++);   
+    //     }
+    //     triangle_num += '1';
+    //     console.log(triangle_num++)
+    // }
+
+
+    // let triangle_num = "";
+    // for (let i = 0; i < 4; i++) {
+    //         triangle_num += '1';
+    //         let triangle_num_pattern = triangle_num++;
+    //         console.log(triangle_num_pattern);
+    // }  
+
+    // let triangle_num = ""
+    // for (let i = 1; i < 5; i++) {
+    //     let number = ""
+    //     for (let k = 1; k < 5; k++) {
+               
+    //         triangle_num += i;    
+    //     }
+    //     console.log(triangle_num)
+    // }
+   
+    let triangle_num = "";
+    for (let i = 1; i < 5; i++) {
+        triangle_num += "\n";
+        for (let k = 0; k < i; k++) {
+            triangle_num += i;
+        }
+    }
+    console.log(triangle_num);
+    
+// 1
+// 12
+// 123
+// 1234
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+    // console.log(
+    //     `
+    //     1
+    //     22
+    //     333
+    //     4444
+    //     `
+    // )
+
+
+
+
+
+</script>
+
+</html>

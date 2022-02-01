@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/select_2.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <input type="text" class="text_area" placeholder="Enter Your Email">
+    <select id="select_area" class="select_area" name="state">
+        <option value="ind">Select Country....</option>
+        <option value="ind">India</option>
+        <option value="japan">Japan</option>
+        <option value="swiss">Switzerland</option>
+        <option value="austria">Austria</option>
+        <option value="usa">Usa</option>
+        <option value="uk">England</option>
+        <option value="aust">Australia</option>
+        <option value="france">France</option>
+        <option value="german">German</option>
+        <option value="sk">South Korea</option>
+        <option value="thai">Thailand</option>
+        <option value="viet">Vietnam</option>
+        <option value="iraq">Iraq</option>
+        <option value="russ">Russia</option>
+    </select>
+</body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        // In your Javascript (external .js resource or <script> tag)
+            
+                $('#select_area').select2();
+            
+            </script>
+
+</html>

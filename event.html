@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <p id="random_para">Komal Sawant</p>
+
+    <div style="display: flex;">
+        <div id="div_bg" onmousemove="change_bc()" onmouseout="changed_bg()"
+            style="height: 300px; width: 300px; background-color: gray; margin: 10px;">
+            <h1>Div 1</h1>
+        </div>
+        <p id="mouse_pos"></p>
+
+    </div>
+    <h1>Try to print this document</h1>
+    <p><b>Tip:</b> Keyboard shortcuts, such as Ctrl+P sets the page to print.</p>
+    <p><b>Note:</b> The onafterprint event is not supported in Safari and Opera.</p>
+    <p><b>Note:</b> In IE, the onafterprint event occurs before the print dialogue box, instead of after.</p>
+
+    <select name="Language" id="lang" onchange="selected()">Slect Language you want
+        <option value="js" id="js">Javascript</option>
+        <option value="html" id="html">HTML</option>
+        <option value="css" id="css">CSS</option>
+        <option value="py" id="python">Python</option>
+    </select>
+    <p id="para_selected"></p>
+    <script>
+        function myFunction() {
+            alert("This document is now being printed");
+        }
+    </script>
+
+</body>
+<script>
+    function change_bc() {
+        let div_bg = document.getElementById('div_bg');
+        div_bg.style.background = "pink";
+        document.getElementById('mouse_pos').innerHTML = "Mouse has move in"
+    }
+    function changed_bg() {
+        let div_bg = document.getElementById('div_bg');
+        div_bg.style.background = "gray";
+        document.getElementById('mouse_pos').innerHTML = "Mouse has move out"
+    }
+
+
+
+
+    function selected() {
+        var x = document.getElementById('lang').value;
+        document.getElementById('para_selected').innerHTML = "You selected" + x;
+
+    }
+    random_para.addEventListener('change', function () {
+        let random_para = document.getElementById('random_para');
+        random_para = random_para.toUpperCase();
+    });
+
+</script>
+
+</html>
